@@ -1,8 +1,8 @@
 // ITERATION 1
-document.getElementsByClassName('product');
+//document.getElementsByClassName('product');
 
 function updateSubtotal(product) {
-  console.log('Calculating subtotal, yey!');
+  //console.log('Calculating subtotal, yey!');
   
   
   const price =  product.querySelector(".price span");//da string, ojo al hacer calculos
@@ -32,14 +32,14 @@ function calculateAll() {
   for(var i = 0; i < document.getElementsByClassName('product').length ; i++){
     //console.log(document.getElementsByClassName('product')[i]);
     updateSubtotal(document.getElementsByClassName('product')[i]);
-     finalSum = finalSum + updateSubtotal;
-     console.log(finalSum);
+     finalSum = finalSum + document.getElementsByClassName('product')[i].querySelector(".price span").innerHTML;
+     //console.log(finalSum);
   } 
   
   
   
   // ITERATION 3
-    const totalToPay = document.getElementById('lastspan').innerText = `${finalSum}` ;
+    const totalToPay = document.getElementById('lastspan').innerText = finalSum ;
     //console.log(totalToPay);
     //totalToPay.value = finalSum;
     //document.getElementById('lastspan').innerHTML = ;
